@@ -16,12 +16,11 @@ Dependencies include from the below code:
 
 ## Useful code (either used in this pipeline or optional code):
 
-SpikeGLX import and processing code:
- https://billkarsh.github.io/SpikeGLX/#post-processing-tools
+SpikeGLX import and processing code: https://billkarsh.github.io/SpikeGLX/#post-processing-tools
 
 Probe Interface (used for getting the channel map from the OpenEphys files): 
- https://probeinterface.readthedocs.io/en/main/installation
- https://github.com/SpikeInterface/probeinterface/
+* https://probeinterface.readthedocs.io/en/main/installation
+* https://github.com/SpikeInterface/probeinterface/
  
 readNPY and readNPYHeader from npy-matlab package from kwik-team: https://github.com/kwikteam/npy-matlab
 
