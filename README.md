@@ -6,6 +6,7 @@ The code included here is for use in processing human Neuropixels data which inc
 Running the processing with this code can be done with the following data sets:
 * Dryad- raw and processed data sets: https://datadryad.org/stash/dataset/doi:10.5061/dryad.d2547d840
 * DANDI- raw and processed data sets in NWB format: https://dandiarchive.org/dandiset/000397
+* Further detailed information is included in a spreadsheet (ExampleNeuropixelsRecordingInformation (csv or xlsx)) per recording
 
 #### Code
 The code included here includes a series of steps with the associated code: 
