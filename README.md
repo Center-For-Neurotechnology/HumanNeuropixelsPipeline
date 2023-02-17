@@ -3,13 +3,30 @@ Pipeline and code for analyzing human Neuropixels data
 The code included here is for use in processing human Neuropixels data which includes deidentification, saving into a common format along with meta-information, integrating depth and other information for re-saving the data. 
 
 The code included here includes a series of steps with the associated code: 
- 1. re-save de-identified Neuropixels neural recording data (either SpikeGLX or OpenEphys) into an int16 binary file for later processing  
+ 1. re-save de-identified Neuropixels neural recording data (either SpikeGLX or OpenEphys) into an int16 binary file for later processing 
+    * Code used:
+    * Input file formats: 
+    * Output file formats: 
  2. re-save needed meta-information from the raw data
- 3. 
+    * Code used:
+    * Input file formats: 
+    * Output file formats: 
  4. integrating depth and other information from a tabulated spreadsheet
+    * Code used:
+    * Input file formats: 
+    * Output file formats: 
  5. re-save the neural data to include only the contacts in the brain and time range with clean recordings for performing motion registration using DREDge
+    * Code used:
+    * Input file formats: 
+    * Output file formats: 
  6. perform the DREDge tracking through time to get the tracked motion
+    * Code used: 
+    * Input file formats: 
+    * Output file formats: 
  7. perform the Interpolation of the data to correct for the motion 
+    * Code used: 
+    * Input file formats: 
+    * Output file formats: 
 
 
 Dependencies include from the below code:
