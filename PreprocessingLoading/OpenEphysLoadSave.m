@@ -7,8 +7,8 @@
 % from: (https://github.com/open-ephys/analysis-tools)
 
 %% OpenEphys loading:
-jsonFile='Y:\IntraOp_Micro\XXXXXXXXXXXXX\XXXXXXXXXXXXX\Record Node 129\experiment1\recording1\structure.oebin';
-addpath(genpath('Y:\IntraOp_Micro\CodeNeuropixels\SpikeCode')) % for the Numpy file read
+jsonFile='E:\DataForNatProtocol\Record Node 106\experiment1\recording1\structure.oebin';
+addpath(genpath('E:\DataForNatProtocol\HumanNeuropixelsPipeline-main')) % for the Numpy file read
 
 DAP=load_open_ephys_binary(jsonFile,'continuous',1,'mmap'); %choose 2 for LFP or 1 for AP
 
