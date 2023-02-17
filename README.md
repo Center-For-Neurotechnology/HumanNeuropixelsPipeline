@@ -2,17 +2,23 @@
 Pipeline and code for analyzing human Neuropixels data
 The code included here is for use in processing human Neuropixels data which includes deidentification, saving into a common format along with meta-information, integrating depth and other information for re-saving the data. 
 
+### Data
+Running the processing with this code can be done with the following data sets:
+* Dryad- raw and processed data sets: https://datadryad.org/stash/dataset/doi:10.5061/dryad.d2547d840
+* DANDI- raw and processed data sets in NWB format: https://dandiarchive.org/dandiset/000397
+
+### Code
 The code included here includes a series of steps with the associated code: 
  1. re-save de-identified Neuropixels neural recording data (either SpikeGLX or OpenEphys) into an int16 binary file for later processing 
-    * Code used: ExampleFileDeID.m
+    * Code used: HumanNeuropixelsPipeline/PreprocessingLoading/ExampleFileDeID.m
     * Input file formats: SpikeGLX .bin files or OpenEphys .dat files with metadata files
     * Output file formats: XXXXXX.ap.bin and XXXXXX.lf.bin files (int16)
  2. re-save needed meta-information from the raw data
-    * Code used: 
-    * Input file formats: 
-    * Output file formats: 
+    * Code used: HumanNeuropixelsPipeline/PreprocessingLoading/ExampleFileDeID.m
+    * Input file formats: SpikeGLX META files or OpenEphys metadata files
+    * Output file formats: XXXXXX_ChannelMap.mat
  4. integrating depth and other information from a tabulated spreadsheet
-    * Code used:
+    * Code used: 
     * Input file formats: 
     * Output file formats: 
  5. re-save the neural data to include only the contacts in the brain and time range with clean recordings for performing motion registration using DREDge
