@@ -4,11 +4,11 @@ The code included here is for use in processing human Neuropixels data which inc
 
 The code included here includes a series of steps with the associated code: 
  1. re-save de-identified Neuropixels neural recording data (either SpikeGLX or OpenEphys) into an int16 binary file for later processing 
-    * Code used:
-    * Input file formats: 
-    * Output file formats: 
+    * Code used: ExampleFileDeID.m
+    * Input file formats: SpikeGLX .bin files or OpenEphys .dat files with metadata files
+    * Output file formats: XXXXXX.ap.bin and XXXXXX.lf.bin files (int16)
  2. re-save needed meta-information from the raw data
-    * Code used:
+    * Code used: 
     * Input file formats: 
     * Output file formats: 
  4. integrating depth and other information from a tabulated spreadsheet
