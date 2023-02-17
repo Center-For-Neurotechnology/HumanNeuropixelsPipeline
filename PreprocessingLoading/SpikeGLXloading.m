@@ -1,6 +1,6 @@
 %% SpikeGLX loading (using the Matlab package: DemoReadSGLXDataBkgrndRun ):
 
-MainDir='R:\Dropbox (Partners HealthCare)\MotionCorrectionWithNeuropixels\data\NeuropixelsHumanData\';
+MainDir='E:\DataForNatProtocol\Pt02\';
 
 FileLoad= dir([MainDir,'\*','Pt02.imec0.ap.bin*']);  %AP
 binName=FileLoad(1).name;
