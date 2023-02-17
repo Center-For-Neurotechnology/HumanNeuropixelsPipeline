@@ -21,8 +21,8 @@ The code included here includes a series of steps with the associated code:
     * Output file formats: XXXXXX_ChannelMap.mat
  4. integrating depth and other information from a tabulated spreadsheet
     * Code used: none, manual entry
-    * Input file formats: 
-    * Output file formats: 
+    * Input file formats: none, manual entry
+    * Output file formats: excel or .csv file including relevant information
  5. re-save the neural data to include only the contacts in the brain and time range with clean recordings for performing motion registration using DREDge
     * Code used: HumanNeuropixelsPipeline/PreprocessingLoading/savingBinaryFilesorMotionRegistraton.m
     * Input file formats: excel (or CSV) spreadsheet indicating experimental details, raw binary files, channel map (.mat) files
