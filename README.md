@@ -11,21 +11,21 @@ Running the processing with this code can be done with the following data sets:
 #### Code
 The code included here includes a series of steps with the associated code: 
  1. re-save de-identified Neuropixels neural recording data (either SpikeGLX or OpenEphys) into an int16 binary file for later processing 
-    * Code used: /PreprocessingLoading/ExampleFileDeID.m
+    * Code used: **/PreprocessingLoading/ExampleFileDeID.m**
     * Input file formats: SpikeGLX .bin files or OpenEphys .dat files with metadata files
     * Output file formats: XXXXXX.ap.bin and XXXXXX.lf.bin files (int16)
  2. re-save needed meta-information from the raw data
     * Code used: 
       - OpenEphys channel information extracted with ElectrodeLocationsImportSaveOpenEphys.py using https://github.com/SpikeInterface/probeinterface/ followed by readingChannelPositionsOpenEphysJson.m to read channel map information into Matlab
-      - SpikeGLX channel information extracted with /PreprocessingLoading/SGLXMetaToCoords.m
+      - SpikeGLX channel information extracted with **/PreprocessingLoading/SGLXMetaToCoords.m**
     * Input file formats: SpikeGLX META files or OpenEphys metadata files
     * Output file formats: XXXXXX_ChannelMap.mat
  4. integrating depth and other information from a tabulated spreadsheet
-    * Code used: none, manual entry, use RelevantDataExamples/PlotingLFP.m code to visualize the LFP voltage to identify the time ranges and channel ranges to use
+    * Code used: none, manual entry, use **RelevantDataExamples/PlotingLFP.m code** to visualize the LFP voltage to identify the time ranges and channel ranges to use
     * Input file formats: none, manual entry
     * Output file formats: excel or .csv file including relevant information
  5. re-save the neural data to include only the contacts in the brain and time range with clean recordings for performing motion registration using DREDge
-    * Code used: /PreprocessingLoading/savingBinaryFilesorMotionRegistraton.m
+    * Code used: **/PreprocessingLoading/savingBinaryFilesorMotionRegistraton.m**
     * Input file formats: excel (or CSV) spreadsheet indicating experimental details, raw binary files, channel map (.mat) files
     * Output file formats: Binary file with modified channel map including only the time range and electrode range indicated
  6. perform the DREDge tracking through time to get the tracked motion
@@ -34,7 +34,7 @@ The code included here includes a series of steps with the associated code:
     * Output file formats: DepthMicronsTracking.csv tracked motion 
  7. perform the Interpolation of the data to correct for the motion 
     * Code used: Interpolation code (https://github.com/williamunoz/DREDge_Interpolation) 
-      - Code to perform the interpolation and realigning using Kilosort 2.5 code: DREDge_Interpolation/Scripts/Realignment/RealignWithDredge_Wrapper.m
+      - Code to perform the interpolation and realigning using Kilosort 2.5 code: **DREDge_Interpolation/Scripts/Realignment/RealignWithDredge_Wrapper.m**
     * Input file formats: *.ap.bin files saved with only the time range of the motion tracked data, chanMap files, and the .csv DREDge motion tracking files
     * Output file formats: interpolated continuous .dat files adjusted for motion 
 
