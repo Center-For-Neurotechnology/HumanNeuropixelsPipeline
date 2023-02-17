@@ -16,7 +16,7 @@ The code included here includes a series of steps with the associated code:
     * Output file formats: XXXXXX.ap.bin and XXXXXX.lf.bin files (int16)
  2. re-save needed meta-information from the raw data
     * Code used: 
-      - OpenEphys channel information extracted with ElectrodeLocationsImportSaveOpenEphys.py using https://github.com/SpikeInterface/probeinterface/ followed by readingChannelPositionsOpenEphysJson.m to read channel map information into Matlab
+      - OpenEphys channel information extracted with **/PreprocessingLoading/ElectrodeLocationsImportSaveOpenEphys.py** using https://github.com/SpikeInterface/probeinterface/ followed by **/PreprocessingLoading/readingChannelPositionsOpenEphysJson.m** to read channel map information into Matlab
       - SpikeGLX channel information extracted with **/PreprocessingLoading/SGLXMetaToCoords.m**
     * Input file formats: SpikeGLX META files or OpenEphys metadata files
     * Output file formats: XXXXXX_ChannelMap.mat
