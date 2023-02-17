@@ -20,7 +20,7 @@ The code included here includes a series of steps with the associated code:
     * Input file formats: SpikeGLX META files or OpenEphys metadata files
     * Output file formats: XXXXXX_ChannelMap.mat
  4. integrating depth and other information from a tabulated spreadsheet
-    * Code used: none, manual entry
+    * Code used: none, manual entry, use RelevantDataExamples/PlotingLFP.m code to visualize the LFP voltage to identify the time ranges and channel ranges to use
     * Input file formats: none, manual entry
     * Output file formats: excel or .csv file including relevant information
  5. re-save the neural data to include only the contacts in the brain and time range with clean recordings for performing motion registration using DREDge
