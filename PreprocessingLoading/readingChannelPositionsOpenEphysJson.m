@@ -1,9 +1,13 @@
+%% Code to read the output .json files from the ElectrodeLocationsImportSaveOpenEphys.py 
+% code using code from https://github.com/SpikeInterface/probeinterface/ to import
+% Channel map information into Matlab
+
 clf
 clear
-FileNA={'Pt04','Pt05','Pt06','Pt07','Pt08','Pt09'}
+FileNA={'Saline2'}
 
-for ns=2:length(FileNA)
-    fname = ['W:\DeidentifiedNeuropixelsData\',FileNA{ns},'\',FileNA{ns},'positions.json'];
+for ns=1:length(FileNA)
+    fname = ['E:\DataForNatProtocol\',FileNA{ns},'\',FileNA{ns},'positions.json'];
     fid = fopen(fname);
     raw = fread(fid,inf);
     str = char(raw');
@@ -13,20 +17,9 @@ for ns=2:length(FileNA)
     xcoords1=val.probes.contact_positions(:,1);
     ycoords1=val.probes.contact_positions(:,2);
 
-    if length(xcoords1)==383 && contains(fname,'Pt06')==0 &&...
-            contains(fname,'Pt07')==0
-        xcoords=[xcoords1(1:191);43;xcoords1(192:383)];
-        ycoords=[ycoords1(1:191);1900;ycoords1(192:383)];
-    elseif length(xcoords1)==383 && contains(fname,'Pt06')==1
-        xcoords=[xcoords1(1:191);43;xcoords1(192:383)];
-        ycoords=[ycoords1(1:191);5740;ycoords1(192:383)];
-    elseif length(xcoords1)==383 && contains(fname,'Pt07')==1
-        xcoords=[xcoords1(1:191);43;xcoords1(192:383)];
-        ycoords=[ycoords1(1:191);5740;ycoords1(192:383)];
-    else
+  
         xcoords=[xcoords1];
         ycoords=[ycoords1];
-    end
 
     plot(xcoords,...
         ycoords,'.')
@@ -36,7 +29,6 @@ for ns=2:length(FileNA)
         num2str((1:length(xcoords))'))
     xcoords=xcoords';
     ycoords=ycoords';
-    save(['W:\DeidentifiedNeuropixelsData\',FileNA{ns},'\',FileNA{ns},'_ChannelMap.mat'],'xcoords','ycoords')
-    save(['E:\',FileNA{ns},'\',FileNA{ns},'_ChannelMap.mat'],'xcoords','ycoords')
+    save(['E:\DataForNatProtocol\',FileNA{ns},'\',FileNA{ns},'_ChannelMap.mat'],'xcoords','ycoords')
 end
 
