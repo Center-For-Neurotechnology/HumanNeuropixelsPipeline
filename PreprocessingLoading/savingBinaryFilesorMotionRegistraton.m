@@ -3,7 +3,7 @@
 clf
 clear
 
-Ta=readtable(['E:\ExampleNeuropixelsRecordingInformation.xlsx']);
+Information=readtable(['E:\ExampleNeuropixelsRecordingInformation.xlsx']);
 PtDesig=table2array(Information(:,1));
 ChannelsSaved=table2array(Information(:,16));
 DepthTop=table2array(Information(:,17));
@@ -43,21 +43,6 @@ for ns=1:4
     fid_source = fopen(target_fileLFP,'r');
     dataLFP = fread (fid_source,[ChanTot,Inf],'int16'); %This is a matrix of channel x time, LFP
     fclose(fid_source)
-
-        for wi=1:length(PtDesig)
-            if isempty(PtDesig{wi})==0
-                if contains(FileNA,PtDesig{wi})==1
-                    ChanTot=ChannelsSaved(wi);
-                    DepthTopPer=DepthTop(wi);
-                    TimeRange1=StartTime(wi);
-                    TimeRange2=EndTime(wi);
-                    pt3=PtDesig(wi)
-                    %             pause
-                end
-            end
-        end
-        xcoordsBase=xcoords;
-        ycoordsBase=ycoords;
 
         SaveDirectory=[Directory,'\'];
         %     mkdir([SaveDirectory])
