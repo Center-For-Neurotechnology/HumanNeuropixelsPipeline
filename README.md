@@ -33,7 +33,7 @@ The code included here includes a series of steps with the associated code:
     * Input file formats: All*.lf.bin (LFP files) and channel map (AllinBrain*_ChannelMap.mat) file including recording details
     * Output file formats: DepthMicronsTracking.csv tracked motion 
  7. perform the Interpolation of the data to correct for the motion 
-    * Code used: Interpolation code (https://github.com/williamunoz/DREDge_Interpolation) 
+    * Code used: Interpolation code (https://github.com/williamunoz/InterpolationAfterDREDge) 
       - Code to perform the interpolation and realigning using Kilosort 2.5 code: **DREDge_Interpolation/Scripts/Realignment/RealignWithDredge_Wrapper.m**
     * Input file formats: *.ap.bin files saved with only the time range of the motion tracked data, chanMap files, and the .csv DREDge motion tracking files
     * Output file formats: interpolated continuous .dat files adjusted for motion 
