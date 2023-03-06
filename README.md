@@ -59,7 +59,7 @@ DREDge (Decentralized Registration of Electrophysiology Data) Motion registratio
 https://github.com/evarol/dredge
 
 Interpolation code- One optional approach for interpolating the code following DREDge motion tracking:
-https://github.com/williamunoz/DREDge_Interpolation
+https://github.com/williamunoz/InterpolationAfterDREDge
 
 Alternately, motion correction software in SpikeInterface (https://github.com/SpikeInterface/spikeinterface ), specifically the Motion correction function (https://spikeinterface.readthedocs.io/en/latest/api.html#module-spikeinterface.sortingcomponents.motion_correction ) 
 
